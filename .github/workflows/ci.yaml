@@ -12,8 +12,8 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          with: 
-           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          # with: 
+          #  BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           env: 
            BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           run: npm run wdio
