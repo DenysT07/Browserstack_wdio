@@ -21,4 +21,4 @@ class Page {
         await expect(await this.getElement(element)).toHaveText(text)
     }
 }
-export default new Page
+module.exports = new Page();

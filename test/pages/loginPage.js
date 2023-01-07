@@ -1,7 +1,7 @@
-import page from "./page.js"
+const page = require("./page.js")
 
 const mainLoginButton = '~Login'
-const emailField = 'input-email'
+const emailField = '~input-email'
 const passwordField = '~input-password'
 const loginButton = '~button-LOGIN'
 const messageLoc = 'id=android:id/message' 
@@ -27,4 +27,4 @@ class LoginPage {
         await page.clickElement(okButton)
     }
 }
-export default new LoginPage;
+module.exports = new LoginPage();

@@ -1,6 +1,8 @@
 exports.config = {
-    user: process.env.BROWSERSTACK_USERNAME || 'bsuser_sdnKq2',
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'cGJtqnesRHFAaiprx7xo',
+    user: process.env.BROWSERSTACK_USERNAME,
+    //  || 'bsuser_sdnKq2',
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
+    //  || 'cGJtqnesRHFAaiprx7xo',
   
     updateJob: false,
     specs: [
@@ -14,7 +16,8 @@ exports.config = {
       name: 'first_test',
       device: 'Google Pixel 5',
       os_version: "11.0",
-      app: process.env.BROWSERSTACK_APP_ID || 'bs://3ecd2ba6381c89282aac224409abe3a2b621ca5f',
+      app: process.env.BROWSERSTACK_APP_ID,
+      //  || 'bs://3ecd2ba6381c89282aac224409abe3a2b621ca5f',
       'browserstack.debug': true,
     }],
   

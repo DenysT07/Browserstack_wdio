@@ -1,6 +1,6 @@
-import page from "./page.js"
+const page = require("./page.js")
 
-const formButt = '~Form'
+const formButt = '~Forms'
 const textFieldLoc = `~text-input`
 const textResultLoc = '~input-text-result'
 const switchLoc = '~switch'
@@ -45,4 +45,4 @@ class FormPage {
     }
 
 }
-export default new FormPage
+module.exports = new FormPage();
