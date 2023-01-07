@@ -1,5 +1,6 @@
 exports.config = {
-    user: process.env.BROWSERSTACK_USERNAME  ||'bsuser_sdnKq2',
+    user: process.env.BROWSERSTACK_USERNAME,
+      // ||'bsuser_sdnKq2',
     key: process.env.BROWSERSTACK_ACCESS_KEY || 'cGJtqnesRHFAaiprx7xo',
   
     updateJob: false,
@@ -22,7 +23,7 @@ exports.config = {
     coloredLogs: true,
     screenshotPath: './errorShots/',
     baseUrl: '',
-    waitforTimeout: 10000,
+    waitforTimeout: 20000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
   
