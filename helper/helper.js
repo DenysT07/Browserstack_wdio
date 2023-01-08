@@ -1,7 +1,7 @@
 const randomString = require('random-string')
 let x = randomString();
 let y = randomString({
-    length: 7,
+    length: 8,
     numeric: true,
     letters: false,
     special: false,
