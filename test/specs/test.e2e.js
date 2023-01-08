@@ -1,11 +1,12 @@
+const helper = require("../../helper/helper.js")
 const formPage = require("../pages/formPage.js")
 const loginPage = require("../pages/loginPage.js")
 
 xdescribe('Login page', () => {
     it('should log in', async () => {
         await loginPage.clickMainLoginBut()
-        await loginPage.fillEmailField("qqweasdzxc@gmail.com")
-        await loginPage.fillPasswordField("123123123")
+        await loginPage.fillEmailField(helper.randomEmail)
+        await loginPage.fillPasswordField(helper.randomPhone)
         await loginPage.clickLoginBut()
         await loginPage.messageToHaveText("You are logged in!")
         await loginPage.okButtClick()
@@ -16,10 +17,9 @@ describe('Form Page', () => {
 
     it('should be displayed text that have been written in text field', async () => {
         await formPage.formButClick()
-        await formPage.fillTextField('someRandom a123')
-        await formPage.textRusultToHaveText('someRandom a123')
+        await formPage.fillTextField(helper.randomString1)
+        await formPage.textRusultToHaveText(helper.randomString1)
     })
-
     it('should show condition of switch', async () => {
         await formPage.clickSwitch()
         await formPage.textUnderSwitchToHaveText('Click to turn the switch OFF')

@@ -1,27 +1,26 @@
-# Repo with test task for browserstack
+# Browserstack_Wdio
+## This project tests Android-NativeDemoApp-0.4.0 using Webdriwer IO framework and Browserstack
 
-## Task
-1.  Clone repo and install all dependencies.
-2.  Upload app Android-NativeDemoApp to browserstack using API ([Link](https://www.browserstack.com/docs/app-automate/api-reference/appium/apps#upload-an-app)) and add unique ID to the ```wdio.conf.js```.
-3.  Create test 5 test cases (locators can be found using [Appium Inspector](https://github.com/appium/appium-inspector/releases) that conected to the Browserstack account).
-4.  Create workflow with using secrets (for user and key in capabilities)([description of secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)).
-5.  Create 2 config files (with different devices)
+Language - JavaScript
 
-## Tips
-1.  You can create multiple accounts in browserstack (demo trial - 100 minutes).
-2.  First of all find all necessary locators.
-3.  In the Appium Inspector at the header choose ```Select Cloud Providers -> Browserstack``` and into ```JSON Representation``` insert the next:
+## For using need to:
+1. Instal Visual Studio Code or other IDE
+
+2. clone this repo
+
+3. Instal node modules
+```console
+npm i
 ```
-{
-  "appium:protocol": "https",
-  "appium:hostname": "hub.browserstack.com",
-  "appium:path": "/wd/hub",
-  "appium:maxInstances": 1,
-  "appium:app": "Your App ID is here",
-  "appium:os_version": "9.0",
-  "appium:deviceName": "Google Pixel 3",
-  "platformName": "Android",
-  "appium:autoAcceptAlerts": "true",
-  "appium:browserstack.appium_version": "1.22.0"
-}
+
+## To run tests with Pixel 3 use
+```console
+npm run wdio 
 ```
+## To run tests with Pixel 5 use
+```console
+npm run wdioPixel5
+```
+To see bashoard of this build follow [this link](https://app-automate.browserstack.com/dashboard/v2/public-build/UlNYSWRSZ2VGM2c1OUNxc2ZmbjVTMDF0aHdEWWZmYW1FNGlwSGJMYTZWaUVzVGZsR0xTdU9MQUJlVHY4SXFYYk5EZVBrU2FNVWFQd2IrT1ZodTRYcUE9PS0tcmtxdmhYaGFKMVRrQVpSaDJ4SGVnUT09--9f92e25003824beb6d3f2879efca4811667aba5a).
+
+![report](https://i.imgur.com/FCFulEO.png)
