@@ -1,8 +1,8 @@
+require('dotenv').config()
+
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME,
-  //  || 'bsuser_sdnKq2',
   key: process.env.BROWSERSTACK_ACCESS_KEY,
-  //  || 'cGJtqnesRHFAaiprx7xo',
 
   updateJob: false,
   specs: [
@@ -17,7 +17,6 @@ exports.config = {
     device: 'Google Pixel 3',
     os_version: "9.0",
     app: process.env.BROWSERSTACK_APP_ID,
-    //  || 'bs://3ecd2ba6381c89282aac224409abe3a2b621ca5f',
     'browserstack.debug': true,
   }],
 
