@@ -2,7 +2,7 @@ const helper = require("../../helper/helper.js")
 const formPage = require("../pages/formPage.js")
 const loginPage = require("../pages/loginPage.js")
 
-xdescribe('Login page', () => {
+describe('Login page', () => {
     it('should log in', async () => {
         await loginPage.clickMainLoginBut()
         await loginPage.fillEmailField(helper.randomEmail)
